@@ -43,7 +43,9 @@ export function Index() {
 
   if (secondsRemaining <= 0) {
     interval = clearInterval(interval)
-    return <>Initializing Overlay...</>
+    return (
+      <div className={'countdownTimerContainer'}>Initializing Overlay...</div>
+    )
   }
 
   const minutes = Math.floor(secondsRemaining / 60)
@@ -51,5 +53,5 @@ export function Index() {
 
   const formattedTime = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`
 
-  return <>{formattedTime}</>
+  return <div className={'countdownTimerContainer'}>{formattedTime}</div>
 }
