@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useReplicant } from 'use-nodecg'
 
-export function Panel() {
+export function CountdownTimer() {
   const [countdownTimerActive, setCountdownTimerActive] = useReplicant<boolean>(
     'countdownTimerActive',
     false
