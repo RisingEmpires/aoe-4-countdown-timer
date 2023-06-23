@@ -44,7 +44,6 @@ export function Panel() {
           />
           <div className='px-16 w-2/5'>
             <button onClick={validateAndSetCountdownTimer}>
-              {' '}
               {!countdownTimerActive ? 'Start Timer' : 'Stop Timer'}
             </button>
           </div>
