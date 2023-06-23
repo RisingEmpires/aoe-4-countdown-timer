@@ -1,0 +1,86 @@
+{
+  "name": "aoe-4-countdown-timer",
+  "version": "0.0.0",
+  "description": "",
+  "homepage": "",
+  "author": {
+    "name": "",
+    "email": "",
+    "url": ""
+  },
+  "files": [
+    "dashboard",
+    "graphics",
+    "extension.js",
+    "extension"
+  ],
+  "keywords": [
+    "",
+    "nodecg-bundle"
+  ],
+  "nodecg": {
+    "compatibleRange": "^2.0.0",
+    "dashboardPanels": [
+      {
+        "name": "panel",
+        "title": "Countdown Timer",
+        "width": 4,
+        "file": "panel.html",
+        "headerColor": "#525F78"
+      }
+    ],
+    "graphics": [
+      {
+        "file": "index.html",
+        "width": 1920,
+        "height": 1080,
+        "singleInstance": false
+      }
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs --all",
+    "build:extension": "node scripts/build.mjs --extension",
+    "watch": "node scripts/build.mjs --all --watch",
+    "watch:browser": "node scripts/build.mjs --dashboard --graphics --watch",
+    "watch:schemas": "node scripts/build.mjs --schemas --watch",
+    "dev": "concurrently --kill-others \"npm run watch:schemas\" \"npm run watch:browser\" \"nodemon\"",
+    "generate-schema-types": "trash src/types/schemas && nodecg schema-types"
+  },
+  "dependencies": {
+    "@types/react": "*",
+    "@types/react-dom": "*",
+    "date-fns": "^2.30.0",
+    "react": "*",
+    "react-dom": "*",
+    "ts-node": "*",
+    "use-nodecg": "^0.4.1-2"
+  },
+  "devDependencies": {
+    "@nodecg/types": "^2.0.0",
+    "@parcel/config-default": "*",
+    "@parcel/core": "*",
+    "@parcel/reporter-cli": "*",
+    "@parcel/validator-typescript": "*",
+    "@types/node": "*",
+    "concurrently": "*",
+    "glob": "*",
+    "nodemon": "*",
+    "trash-cli": "*",
+    "typescript": "*"
+  },
+  "repository": "git@github.com:RisingEmpires/aoe4-stream-manager.git",
+  "license": "Apache-2.0"
+}
