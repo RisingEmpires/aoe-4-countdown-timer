@@ -43,7 +43,7 @@ export function Index() {
 
   if (secondsRemaining <= 0) {
     interval = clearInterval(interval)
-    return <>Initilizing Overlay...</>
+    return <>Initializing Overlay...</>
   }
 
   const minutes = Math.floor(secondsRemaining / 60)
