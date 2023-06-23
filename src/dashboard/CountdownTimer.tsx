@@ -13,6 +13,11 @@ export function CountdownTimer() {
   const [countdownTime, setCountdownTime] = useState('')
 
   const validateAndSetCountdownTimer = () => {
+    // If countdown is currently active and the user just hit stop, ensure this happens regardless of if we have a valid time
+    if (countdownTimerActive) {
+      setCountdownTimerActive(!countdownTimerActive)
+    }
+
     const timeParts = countdownTime.split(':')
     if (timeParts?.length !== 2) return
 
@@ -26,7 +31,10 @@ export function CountdownTimer() {
     timerEndDate.setMinutes(timerEndDate.getMinutes() + minutes)
     timerEndDate.setSeconds(timerEndDate.getSeconds() + seconds)
 
-    setCountdownTimerActive(!countdownTimerActive)
+    // Similar to above, don't provoke the react gods and ensure we only set this if we haven't already
+    if (!countdownTimerActive) {
+      setCountdownTimerActive(!countdownTimerActive)
+    }
     setCountdownTimerEnd(timerEndDate.toString())
   }
 
