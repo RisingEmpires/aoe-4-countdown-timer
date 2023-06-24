@@ -77,7 +77,7 @@
     "@parcel/validator-typescript": "*",
     "@types/node": "*",
     "concurrently": "*",
-    "glob": "*",
+    "glob": "^10.2.7",
     "nodemon": "*",
     "trash-cli": "*",
     "typescript": "*"
