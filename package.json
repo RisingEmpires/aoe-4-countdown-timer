@@ -63,6 +63,7 @@
     "@types/react": "*",
     "@types/react-dom": "*",
     "date-fns": "^2.30.0",
+    "nodecg-cli": "^8.6.8",
     "react": "*",
     "react-dom": "*",
     "ts-node": "*",

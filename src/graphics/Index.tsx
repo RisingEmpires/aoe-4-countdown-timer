@@ -44,7 +44,7 @@ export function Index() {
   if (secondsRemaining <= 0) {
     interval = clearInterval(interval)
     return (
-      <div className={'countdownTimerContainer'}>Initializing Overlay...</div>
+      <div className={'countdownTimerContainer'}>Starting Soon™</div>
     )
   }
 
