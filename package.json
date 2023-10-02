@@ -66,6 +66,7 @@
     "nodecg-cli": "^8.6.8",
     "react": "*",
     "react-dom": "*",
+    "react-tooltip": "^5.21.5",
     "ts-node": "*",
     "use-nodecg": "^0.4.1-2"
   },
@@ -77,7 +78,7 @@
     "@parcel/validator-typescript": "*",
     "@types/node": "*",
     "concurrently": "*",
-    "glob": "^10.2.7",
+    "glob": "^10.3.10",
     "nodemon": "*",
     "trash-cli": "*",
     "typescript": "*"
